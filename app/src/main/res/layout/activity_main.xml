@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/radio_group"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/message_tab"
+            style="@style/TabRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/message_sel"
+            android:text="@string/message" />
+
+        <RadioButton
+            android:id="@+id/friend_tab"
+            style="@style/TabRadioButton"
+            android:drawableTop="@drawable/friend_sel"
+            android:text="@string/friend" />
+
+        <RadioButton
+            android:id="@+id/find_tab"
+            style="@style/TabRadioButton"
+            android:drawableTop="@drawable/find_sel"
+            android:text="@string/find" />
+
+        <RadioButton
+            android:id="@+id/mine_tab"
+            style="@style/TabRadioButton"
+            android:drawableTop="@drawable/mine_sel"
+            android:text="@string/mine" />
+    </RadioGroup>
+
+</RelativeLayout>

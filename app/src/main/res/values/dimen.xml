@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="textview_height">25dp</dimen>
+    <dimen name="textview_width">150dp</dimen>
+    <dimen name="button_radius">15dp</dimen>
+    <dimen name="first_tips_size">30sp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="top">40dp</dimen>
+</resources>
+

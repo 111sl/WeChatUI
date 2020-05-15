@@ -1,4 +1,4 @@
-package com.example.uncledrew.wechatui;
+package com.example.uncledrew.wechatui.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

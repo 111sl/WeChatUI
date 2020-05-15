@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.uncledrew.wechatui.adapter.ViewPagerAdapter;
 import com.example.uncledrew.wechatui.fragment.FirstFragment;
 import com.example.uncledrew.wechatui.fragment.FourthFragment;
 import com.example.uncledrew.wechatui.fragment.SecondFragment;

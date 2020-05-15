@@ -2,9 +2,11 @@ package com.example.uncledrew.wechatui;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.example.uncledrew.wechatui.fragment.FirstFragment;
 import com.example.uncledrew.wechatui.fragment.FourthFragment;
@@ -20,12 +22,18 @@ public class MainActivity extends AppCompatActivity {
     private List<Fragment> fragmentList;
     private ViewPagerAdapter adapter;
     private RadioGroup radioGroup;
+    private TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.hide();
+        }
         viewPager = findViewById(R.id.view_pager);
         radioGroup = findViewById(R.id.radio_group);
+        title = findViewById(R.id.action_title);
         fragmentList = new ArrayList<>();
         fragmentList.add(new FirstFragment());
         fragmentList.add(new SecondFragment());
@@ -44,15 +52,19 @@ public class MainActivity extends AppCompatActivity {
                 switch (i){
                     case 0:
                         radioGroup.check(R.id.message_tab);
+                        title.setText("微信");
                         break;
                     case 1:
                         radioGroup.check(R.id.friend_tab);
+                        title.setText("通讯录");
                         break;
                     case 2:
                         radioGroup.check(R.id.find_tab);
+                        title.setText("发现");
                         break;
                     case 3:
                         radioGroup.check(R.id.mine_tab);
+                        title.setText("我");
                         break;
                     default:
                         break;

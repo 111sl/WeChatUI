@@ -9,10 +9,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.uncledrew.wechatui.adapter.ViewPagerAdapter;
-import com.example.uncledrew.wechatui.fragment.FirstFragment;
-import com.example.uncledrew.wechatui.fragment.FourthFragment;
-import com.example.uncledrew.wechatui.fragment.SecondFragment;
-import com.example.uncledrew.wechatui.fragment.ThirdFragment;
+import com.example.uncledrew.wechatui.fragment.FindFragment;
+import com.example.uncledrew.wechatui.fragment.FriendsFragment;
+import com.example.uncledrew.wechatui.fragment.MineFragment;
+import com.example.uncledrew.wechatui.fragment.MsgFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         radioGroup = findViewById(R.id.radio_group);
         title = findViewById(R.id.action_title);
         fragmentList = new ArrayList<>();
-        fragmentList.add(new FirstFragment());
-        fragmentList.add(new SecondFragment());
-        fragmentList.add(new ThirdFragment());
-        fragmentList.add(new FourthFragment());
+        fragmentList.add(new MsgFragment());
+        fragmentList.add(new FriendsFragment());
+        fragmentList.add(new FindFragment());
+        fragmentList.add(new MineFragment());
         adapter = new ViewPagerAdapter(getSupportFragmentManager(),fragmentList);
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

@@ -1,11 +1,9 @@
 package com.example.uncledrew.wechatui.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class FirstFragment extends Fragment {
+public class MsgFragment extends Fragment {
 
     public static final String TAG = "FirstFragment";
     private List<Message> msgList = new ArrayList<>();
@@ -27,7 +25,7 @@ public class FirstFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_first,container,false);
+        View view = inflater.inflate(R.layout.fragment_msg,container,false);
         MessageAdapter adapter = new MessageAdapter(getContext(),R.layout.message_item,init());
         ListView listView = view.findViewById(R.id.message_list);
         listView.setAdapter(adapter);

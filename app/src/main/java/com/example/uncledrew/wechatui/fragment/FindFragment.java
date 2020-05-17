@@ -11,12 +11,12 @@ import android.view.ViewGroup;
 import com.example.uncledrew.wechatui.R;
 
 
-public class FourthFragment extends Fragment {
+public class FindFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fourth,container,false);
+        View view = inflater.inflate(R.layout.fragment_find,container,false);
         return view;
     }
 }
